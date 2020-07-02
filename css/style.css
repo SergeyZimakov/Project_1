@@ -1,0 +1,131 @@
+
+/* border: 1px solid black; */
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    padding: 15px;
+    background-image: url(../img/light-wooden-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.noteInputField {
+    position: relative;
+    height: 400px;
+    width: 80%;
+    background: url('../img/Notebook.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin: auto;
+    padding: 35px 35px 35px 85px;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+textarea {
+    height: 80%;
+    width: 100%;
+    font-size: 48px;
+    vertical-align: top;
+    resize: none;
+    margin: auto;
+}
+label {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.saveBtn {
+    background: transparent;
+    font-size: 32px;
+    margin-left: 15px;
+}
+.saveBtn:hover {
+    text-shadow: 2px 2px 2px black;
+}
+.fa-refresh {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    color: cadetblue;
+    font-size: 24px;
+}
+.fa-refresh:hover {
+    font-size: 28px;
+}
+
+.createdNote {
+    background-image: url(../img/Note-PNG-File.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 350px;
+    width: 350px;
+    padding: 50px;
+    animation: fadeIn 2s;
+    transform: rotate(-5deg);
+}
+.createdNote:nth-child(1) {
+    animation: fadeInNew 5s;
+
+}
+.createdNote p {
+    display: block;
+    font-size: 24px;
+    height: 70%;
+    overflow-y: auto;
+    margin: 30px 0 20px 0;
+}
+.removeIcon {
+    height: 15px;
+}
+.glyphicon-remove {
+    display: none;
+    text-align: right;
+    cursor: pointer;
+}
+.createdNote:hover .glyphicon-remove {
+    display: block;
+}
+.glyphicon-remove:hover {
+    font-size: 18px;
+}
+
+@keyframes fadeInNew {
+    from {
+        opacity: 0;
+        transform: rotate(5deg);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

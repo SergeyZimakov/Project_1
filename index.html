@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project_1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Note List</div>
+        <form onsubmit="addNewNoteToState(event)">
+            <div class="noteInputField d-flex flex-column justify-content-between">
+                <i class="fa fa-refresh" onclick="clearInput()"></i>
+                <textarea type="text" class="userInput" id="taskInput" required></textarea>
+                <div class="noteInputField__footer d-flex justify-content-between">
+                    <div class="noteInputField__date d-flex  justify-content-start align-items-center">
+                        <label>Date:</label>
+                        <input type="date" class="userInput" id="dateInput" required>
+                        <label>Time:</label>
+                        <input type="time" id="timeInput" class="userInput">
+                    </div>
+                    <div class="noteInputField__buttons align-self-end">
+                        <input type="submit" value="Save" class="saveBtn">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="content d-flex flex-wrap" id="content">
+            <!-- <div class="createdNote" id="createdNote">
+                <div class="removeIcon" onclick="removeItem()"><i class="glyphicon glyphicon-remove"></i></div>
+                <p id="task">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab qui soluta eum obcaecati sint officia corporis ducimus voluptate minima ea nesciunt, inventore blanditiis repellat, facilis, similique expedita. Est, ipsum esse.</p>
+                <div class="deadline" id="deadline"><span id="date">20/05/2020</span><br><span id="time">20:05</span></div>
+            </div> -->
+        </div>
+
+
+
+    </div>
+
+
+<!-- FADE IN, SCROLLER -->
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
