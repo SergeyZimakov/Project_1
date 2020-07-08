@@ -14,20 +14,23 @@
 <body>
     <div class="container">
         <div class="header">Task List Keeper</div>
+        <form onsubmit="addNewNoteToState(event)">
+            <div class="noteInputField d-flex flex-column justify-content-between">
+                <textarea type="text" class="userInput" id="taskInput" required></textarea>
+                <div class="noteInputField__date d-flex  justify-content-start align-items-center">
+                    <label>Date:</label>
+                    <input type="date" class="userInput" id="dateInput" required>
+                    <label>Time:</label>
+                    <input type="time" id="timeInput" class="userInput">
+                </div>
+                <div class="noteInputField__buttons d-flex justify-content-between">
+                    <button type="submit"><i class="fa fa-save"></i></button>
+                    <button><i class="fa fa-refresh" onclick="clearInput()"></i></button>
+                </div>
+            </div>
+        </form>
 
-        <div class="noteInputField d-flex flex-column justify-content-between">
-            <textarea type="text" class="userInput" id="taskInput" required></textarea>
-            <div class="noteInputField__date d-flex  justify-content-start align-items-center">
-                <label>Date:</label>
-                <input type="date" class="userInput" id="dateInput" required>
-                <label>Time:</label>
-                <input type="time" id="timeInput" class="userInput">
-            </div>
-            <div class="noteInputField__buttons d-flex justify-content-between">
-                <i class="fa fa-save" onclick="addNewNoteToState(event)"></i>
-                <i class="fa fa-refresh" onclick="clearInput()"></i>
-            </div>
-        </div>
+
 
 
         <div class="content d-flex flex-wrap justify-content-start" id="content">
